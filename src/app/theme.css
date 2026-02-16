@@ -1,0 +1,96 @@
+:root {
+    /* 
+   * USER CONFIGURATION
+   * Change these colors to update the look of the portfolio.
+   */
+    --main-primary: #DB2265;
+    /* Magenta */
+    --main-secondary: #FF8840;
+    /* Orange */
+    --main-accent: #FFDB99;
+    /* Pale Yellow */
+
+    /* Light Mode Backgrounds */
+    --bg-light: #fff7ed;
+    /* Very Pale Orange */
+    --text-light: #0f172a;
+    /* Slate-900 */
+
+    /* Dark Mode Backgrounds */
+    --bg-dark: #020617;
+    /* Slate-950 */
+    --text-dark: #f8fafc;
+    /* Slate-50 */
+}
+
+:root {
+    --background: var(--bg-light);
+    --foreground: var(--text-light);
+
+    --card: #ffffff;
+    --card-foreground: #0f172a;
+
+    --popover: #ffffff;
+    --popover-foreground: #0f172a;
+
+    --primary: var(--main-primary);
+    --primary-foreground: #ffffff;
+
+    --secondary: var(--main-secondary);
+    --secondary-foreground: #ffffff;
+
+    --muted: #f1f5f9;
+    /* Slate-100 */
+    --muted-foreground: #64748b;
+    /* Slate-500 */
+
+    --accent: #f1f5f9;
+    /* Slate-100 (Used for hover effects) */
+    --accent-foreground: #0f172a;
+
+    --destructive: #ef4444;
+    --destructive-foreground: #ffffff;
+
+    --border: #e2e8f0;
+    /* Slate-200 */
+    --input: #e2e8f0;
+    --ring: var(--main-primary);
+
+    --radius: 0.5rem;
+
+    /* Custom generic accent for non-shadcn elements if needed */
+    --brand-accent: var(--main-accent);
+}
+
+.dark {
+    --background: var(--bg-dark);
+    --foreground: var(--text-dark);
+
+    --card: #020617;
+    --card-foreground: #f8fafc;
+
+    --popover: #020617;
+    --popover-foreground: #f8fafc;
+
+    --primary: var(--main-primary);
+    --primary-foreground: #ffffff;
+
+    --secondary: var(--main-secondary);
+    --secondary-foreground: #ffffff;
+
+    --muted: #1e293b;
+    /* Slate-800 */
+    --muted-foreground: #94a3b8;
+    /* Slate-400 */
+
+    --accent: #1e293b;
+    /* Slate-800 */
+    --accent-foreground: #f8fafc;
+
+    --destructive: #7f1d1d;
+    --destructive-foreground: #f8fafc;
+
+    --border: #1e293b;
+    --input: #1e293b;
+    --ring: var(--main-primary);
+}
