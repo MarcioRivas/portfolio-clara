@@ -39,8 +39,8 @@ export default function ProjectsPage() {
                                         ))}
                                     </div>
                                     <h2 className="text-3xl font-bold text-foreground">{project.title}</h2>
-                                    <p className="mt-4 text-lg text-muted-foreground leading-relaxed">
-                                        {project.longDescription || project.description}
+                                    <p className="mt-4 text-base text-muted-foreground leading-relaxed">
+                                        {project.description}
                                     </p>
                                 </div>
 
