@@ -13,7 +13,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Clara Burutaran - Portfolio de Diseño Gráfico',
+  title: 'Clara Burutaran',
   description: 'Portafolio profesional de Clara Burutaran, Diseñadora Gráfica Urugaya.',
 };
 
