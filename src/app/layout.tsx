@@ -25,18 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${poppins.variable} scroll-smooth`}>
-      <body className="font-sans antialiased min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-[var(--primary)] selection:text-white relative">
-        <div className="fixed inset-0 z-[-1] opacity-30 pointer-events-none">
-          <Image
-            src="/images/background.png"
-            alt="Fondo decorativo"
-            fill
-            className="object-cover"
-            priority
-            quality={100}
-          />
-        </div>
+    <html lang="es" className={`${poppins.variable} scroll-smooth scroll-pt-20`}>
+      <body className="font-sans antialiased min-h-screen flex flex-col text-[var(--foreground)] selection:bg-[var(--primary)] selection:text-white relative bg-background">
         <Navbar />
         <main className="flex-grow">
           {children}

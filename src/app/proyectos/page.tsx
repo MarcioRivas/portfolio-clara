@@ -12,7 +12,7 @@ export default function ProjectsPage() {
         <div className="py-24 bg-background min-h-screen">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl pb-2">
+                    <h1 className="text-4xl font-extrabold tracking-tight text-foreground sm:text-5xl pb-2 lg:mt-14">
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
                             Portafolio de Proyectos
                         </span>
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
                     </p>
                 </div>
 
-                <div className="space-y-40 mt-40">
+                <div className="space-y-40 mt-20">
                     {projects.map((project, index) => (
                         <div
                             key={project.id}
@@ -57,7 +57,9 @@ export default function ProjectsPage() {
                                     ))}
                                 </div>
 
-                                <Button variant="link" asChild className="text-primary font-semibold hover:text-primary/80 transition-colors p-0 h-auto">
+
+                                {/* Desktop Link */}
+                                <Button variant="link" asChild className="hidden lg:inline-flex text-primary font-semibold hover:text-primary/80 transition-colors p-0 h-auto mt-2">
                                     <Link href={`/proyectos/${project.id}`}>
                                         Ver Estudio Completo
                                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -65,15 +67,24 @@ export default function ProjectsPage() {
                                 </Button>
                             </div>
 
-                            <div className="flex-1 w-full relative group">
-                                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                                <Card className="relative w-full aspect-[4/3] bg-muted rounded-xl overflow-hidden shadow-2xl border-none">
-                                    <ZoomableImage
-                                        src={project.imageUrl}
-                                        alt={`Imagen de ${project.title}`}
-                                        className="object-cover"
-                                    />
-                                </Card>
+                            <div className="flex-1 w-full flex flex-col items-start gap-4">
+                                <div className="relative group w-full">
+                                    <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+                                    <Card className="relative w-full aspect-[4/3] bg-muted rounded-xl overflow-hidden shadow-2xl border-none">
+                                        <ZoomableImage
+                                            src={project.imageUrl}
+                                            alt={`Imagen de ${project.title}`}
+                                            className="object-cover"
+                                        />
+                                    </Card>
+                                </div>
+                                {/* Mobile Link */}
+                                <Button variant="link" asChild className="lg:hidden text-primary font-semibold hover:text-primary/80 transition-colors p-0 h-auto mt-2">
+                                    <Link href={`/proyectos/${project.id}`}>
+                                        Ver Estudio Completo
+                                        <ArrowRight className="w-4 h-4 ml-2" />
+                                    </Link>
+                                </Button>
                             </div>
                         </div>
                     ))}

@@ -13,11 +13,11 @@ export default function Home() {
       <Hero />
 
       {/* Projects Section */}
-      <section id="proyectos" className="py-24 bg-muted/30">
+      <section id="proyectos" className="py-24 bg-gradient-to-b from-background to-primary/9">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Proyectos Destacados
+            <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
+              Proyectos
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Una selección de trabajos recientes que combinan creatividad y propósito.
@@ -41,19 +41,18 @@ export default function Home() {
       </section>
 
       {/* Skills / About Section (Expanded) */}
-      <section id="competencias" className="py-24 bg-background">
+      <section id="competencias" className="py-44 bg-gradient-to-b from-primary/9 to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center mb-16">
-            <h2 className="text-base text-primary font-semibold tracking-wide uppercase">Software & Habilidades</h2>
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-foreground sm:text-4xl">
-              Herramientas y Competencias
+            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-secondary sm:text-4xl">
+              Competencias
             </p>
             <p className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto">
               Combino habilidades técnicas avanzadas con una mentalidad estratégica y colaborativa.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
             {/* Skill 1: Adobe Creative Cloud */}
             <Card className="hover:shadow-lg transition-shadow border-muted py-4">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -144,21 +143,6 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
-
-      {/* Contact Section Preview */}
-      <section className="bg-primary py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground mb-4">¿Te interesa colaborar?</h2>
-          <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-            Estoy siempre abierta a nuevas oportunidades y proyectos desafiantes. Conectemos.
-          </p>
-          <Button asChild variant="secondary" size="lg" className="rounded-full px-8 text-primary font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all">
-            <a href="#contact">
-              Contactar Ahora
-            </a>
-          </Button>
         </div>
       </section>
     </div>

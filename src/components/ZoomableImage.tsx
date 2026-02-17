@@ -71,7 +71,7 @@ export default function ZoomableImage({ src, alt, className, aspectRatio = "vide
                         className="absolute top-4 right-4 text-white/70 hover:text-white hover:bg-white/10 z-[10000] rounded-full p-2 h-12 w-12"
                         onClick={closeModal}
                     >
-                        <X className="h-8 w-8" />
+                        <X className="size-8 text-black" />
                         <span className="sr-only">Cerrar</span>
                     </Button>
 

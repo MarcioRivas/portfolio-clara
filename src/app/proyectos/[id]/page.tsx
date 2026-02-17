@@ -56,8 +56,8 @@ export default async function ProjectDetail({
                 </header>
 
                 {/* Image Carousel */}
-                <section className="mb-16 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                    <Carousel className="w-full max-w-4xl mx-auto">
+                <section className="mb-16 animate-fade-in relative" style={{ animationDelay: '0.2s' }}>
+                    <Carousel className="w-full max-w-4xl mx-auto relative">
                         <CarouselContent>
                             {project.images?.map((img, index) => (
                                 <CarouselItem key={index}>
@@ -73,25 +73,14 @@ export default async function ProjectDetail({
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
+                        <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-background/50 hover:bg-background/80 border-none text-foreground" />
+                        <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-background/50 hover:bg-background/80 border-none text-foreground" />
                     </Carousel>
                 </section>
 
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                     {project.longDescription || project.description}
                 </p>
-
-                {/* Call to Action */}
-                <div className="text-center mt-12 pt-12 border-t animate-fade-in" style={{ animationDelay: '0.6s' }}>
-                    <h3 className="text-2xl font-bold mb-4">¿Te gustó este proyecto?</h3>
-                    <p className="text-muted-foreground mb-8">
-                        Estoy disponible para nuevos desafíos. Hablemos sobre tu próxima idea.
-                    </p>
-                    <Button asChild size="lg" className="rounded-full px-8">
-                        <Link href="/#contact">Contactar Ahora</Link>
-                    </Button>
-                </div>
 
             </div>
         </div>
