@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { Poppins } from 'next/font/google';
 
 import './globals.css';
